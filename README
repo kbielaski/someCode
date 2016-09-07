@@ -1,0 +1,20 @@
+first make all
+
+#index corpus.txt to various files in the current directory named index.*
+./binary_index_gen --index index < corpus.txt
+
+#add bigram index (not needed unless you want bigram list)
+./bigram_gen --index index < corpus.txt
+
+#get index stats
+./index_stats --index index
+
+#perform a single search (get feature values)
+./index_search --index index <<< "search terms"
+
+#lookup document 3 (by numeric id)
+./doc_lookup --index index --corpus corpus.txt 3
+
+
+#classes
+index_searcher - performs 4 functions: scans through terms, looks up individual terms, looks up index statistics, and looks up documents
