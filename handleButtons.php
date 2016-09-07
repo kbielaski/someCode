@@ -90,12 +90,12 @@ tr:nth-child(even) {
 
       echo $query . " " . $dataset;
 
-      $output = `echo $query | $index_search --index /silo/datasets/indices/$dataset/index | $parser $query $dataset 0`;
+      $output = `echo $query | $index_search --index /silo/datasets/indices/$dataset/index | $parser $query $dataset 0 > output.txt`;
       //$output = shell_exec("echo " . $query . " | " . $index_search . " --index /silo/datasets/indices/" . $dataset . "/index | " . $parser . " " . $query . " " . $dataset ." 0");
  
 
       //the problem is that the output isn't being completed by the server
-      echo "<pre>" . $output . "</pre>";
+      //echo "<pre>" . $output . "</pre>";
      //$dirOutput = `dir`;
      //echo "<pre>" . $dirOutput . "</pre>";
 
@@ -132,6 +132,10 @@ tr:nth-child(even) {
     }
 
     //now from here make the output into a matrix
+    //i need to read in the output.txt file to $output-- try limiting the size of the output
+    $output = file_get_contents("output.txt");
+    echo $output;
+
     $line = explode("/n",$output);
     unset($this->matrix);
     $this->matrix = array();
