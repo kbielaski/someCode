@@ -10,6 +10,9 @@ htmlMatrix
 searchResults
 secure_search
 
+1. the aquaint doesn't print anything
+2. I don't have the preCalculated Queries working
+
 first make all
 
 #index corpus.txt to various files in the current directory named index.*
