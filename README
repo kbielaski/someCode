@@ -2,6 +2,14 @@ http://stackoverflow.com/questions/10756140/asp-net-mvc-and-state-how-to-keep-st
 
 You can store it in server memory by acessing objects that lives throughout requests, e.g. session variables
 
+I want to make this into a MVC program but I need to figure out how to save the matrix variable between states because I don't want to have to do the parser each time
+
+remember:
+handleButtons
+htmlMatrix
+searchResults
+secure_search
+
 first make all
 
 #index corpus.txt to various files in the current directory named index.*
