@@ -1,0 +1,28 @@
+<?php
+include "htmlMatrix.php";
+//I am using these values to test
+
+/*$_GET["selectColSort"] = "delete";
+  $_GET["sortBy"] = "three";*/
+
+/*
+echo $_GET["preCalcDropdown"] = "default";
+echo $_GET["displayValue"] = "hello";
+echo $_GET["dataset"] = "trec08";
+*/
+ 
+//the preCalculated Queries don't work yet
+if(isset($_GET["preCalcDropdown"]) and isset($_GET["displayValue"]) and isset($_GET["dataset"])){
+  $matrix = new htmlMatrix();
+  $matrix->submitQuery($_GET["preCalcDropdown"], $_GET["displayValue"], $_GET["dataset"]);
+}
+
+else{
+  echo "ERROR: all search fields are not filled out";
+}
+
+
+//also handle press to the button that has a link to 
+
+
+?>
