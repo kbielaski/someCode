@@ -1,3 +1,7 @@
+http://stackoverflow.com/questions/10756140/asp-net-mvc-and-state-how-to-keep-state-between-requests
+
+You can store it in server memory by acessing objects that lives throughout requests, e.g. session variables
+
 first make all
 
 #index corpus.txt to various files in the current directory named index.*
